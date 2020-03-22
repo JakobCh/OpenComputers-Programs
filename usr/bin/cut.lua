@@ -106,7 +106,10 @@ end]]--
 
 local input
 if rawFile == "-" then --load from standard in
-	input = io.read()
+	repeat
+		local data = io.read()
+		input = input .. (data or "")
+	until not data
 else
 	if fs.exists(file) then
 		if fs.isDirectory(file) then
@@ -154,17 +157,5 @@ for _,line in pairs(textLines) do
 	end
 end
 
-
-
---local textFields = Split(input,delimiter)
-
---local output = {}
-
---for _,m in pairs(fields) do
-	--print(m)
-	--table.insert(output, textFields[tonumber(m)])
---end
-
---io.write(table.concat(output, delimiter))
 
 
