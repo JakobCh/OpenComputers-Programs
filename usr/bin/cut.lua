@@ -5,7 +5,7 @@ local args = table.pack(...)
 local sargs = " " .. table.concat(args, " ") .. " "
 
 local function usage()
-  print("Usage: cut OPTION... [FILE]"..[[
+  print("Usage: cut OPTION... [FILE]\n"..[[
 Print selected parts of lines from FILE to standard output.
 With no FILE, or when FILE is -, read standard input.
 
