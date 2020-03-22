@@ -28,3 +28,4 @@ EXAMPLES
 	cat filename | cut --delimiter=a --fields=1,3,4
 	components | grep filesystem | cut -n" " -f2
 	cut --debug --delimiter=";" --fields=1,3,4 -c 4-5 testfile
+	ls -l /dev/components/by-type/filesystem/ | cut -c 30-65

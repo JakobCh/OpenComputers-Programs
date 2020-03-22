@@ -69,10 +69,6 @@ local function Split(text, de)
 end
 
 
---for m,n in pairs(args) do
---	print(m .. ":" .. n)
---end
-
 local DEBUG = argsMatch("%s--debug%s")
 
 if argsMatch("%s-h%s") or argsMatch("%s--help%s") then
@@ -96,13 +92,8 @@ if DEBUG then
 	print("rawFields:" .. rawFields)
 	print("onlyDelimiter:" .. tostring(onlyDelimiter))
 	print("rawCut:" .. rawCut)
-	print("cut:"..cut[1]..cut[2])
+	--print("cut:"..cut[1]..cut[2])
 end
-
---[[if #fields == 0 then
-	io.stderr:write("No fields specified")
-	return 4
-end]]--
 
 local input = ""
 if rawFile == "-" then --load from standard in
