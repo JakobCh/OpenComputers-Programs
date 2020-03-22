@@ -9,9 +9,17 @@ local function usage()
 Print selected parts of lines from FILE to standard output.
 With no FILE, or when FILE is -, read standard input.
 
-	-d			Set the delimiter
-	-f			Set the fields to return
-	--debug		Get debug output (prints to stdout)
+	-c, --characters=LIST
+		select only these characters
+
+	-d, --delimiter=DELIM
+		use DELIM instead of TAB for field delimiter
+
+	-f, --fields=LIST
+		select only these fields; also print any line that contains no delimiter character, unless the -s option is specified.
+
+	-s, --only-delimited
+		do not print lines not dontaining delimiters
 	
 Just check the man page tbh.
 ]])
