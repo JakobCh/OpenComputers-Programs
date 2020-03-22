@@ -133,7 +133,7 @@ local textLines = Split(input, "\n")
 for _,line in pairs(textLines) do
 	local output = {}
 	
-	if cut ~= "" then
+	if rawCut ~= "" then
 		print(cutFunc(line, cut))
 	else
 		local textFields = Split(line,delimiter)
