@@ -108,7 +108,9 @@ local input = ""
 if rawFile == "-" then --load from standard in
 	repeat
 		local data = io.read()
-		input = input .. (data or "")
+		if data ~= nil then
+			input = input .. data .. "\n"
+		end
 	until not data
 else
 	if fs.exists(file) then
