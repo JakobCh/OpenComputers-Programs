@@ -20,7 +20,7 @@ DESCRIPTION
 		select only these fields; also print any line that contains no delimiter character, unless the -s option is specified.
 
 	-s, --only-delimited
-		do not print lines not dontaining delimiters
+		do not print lines not containing delimiters
 
 EXAMPLES
 	cut -d: -f1,4 filename
