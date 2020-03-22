@@ -104,7 +104,7 @@ end
 	return 4
 end]]--
 
-local input
+local input = ""
 if rawFile == "-" then --load from standard in
 	repeat
 		local data = io.read()
@@ -116,7 +116,6 @@ else
 			io.stderr:write("This is a directory: " .. file)
 			return 3
 		else
-			input = ""
 			local f = fs.open(file)
 			repeat
 				local data = f:read(math.huge)
